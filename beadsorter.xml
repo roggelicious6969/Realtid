@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<GCDocument color="-35" dimTicks="25" dpwsInterface="" dpwsPort="-1" height="609" horizontalScrollBar="1" modifiable="1" name="BeadSorter" saveVersion="8" scale="0.81" simulationMode="1" socketHost="" socketIsServer="0" socketPort="-1" socketSendMode="Changed" threadSpeed="10" tokenLuminance="0" verticalScrollBar="1" viewPositionX="0" viewPositionY="170" width="1136" x="0" y="0">
+<GCDocument color="-35" dimTicks="25" dpwsInterface="" dpwsPort="-1" height="609" horizontalScrollBar="1" modifiable="1" name="BeadSorter" saveVersion="8" scale="0.81" simulationMode="1" socketHost="" socketIsServer="0" socketPort="-1" socketSendMode="Changed" threadSpeed="10" tokenLuminance="0" verticalScrollBar="1" viewPositionX="0" viewPositionY="0" width="1136" x="74" y="201">
   <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="Serif" fontSize="16" height="22" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Inputs" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="44" x="20" y="50"/>
   <DigitalIn channel="30" cyclic="1" height="58" name="Tilt" value="1" width="90" x="140" y="40"/>
   <AnalogIn channel="32" cyclic="1" height="58" name="AnalogBead" value="0.225" width="90" x="360" y="40"/>
@@ -135,10 +135,10 @@
   </WorkspaceObject>
   <AssignmentButton action="S ResetBead = 1;" alwaysAct="0" height="35" name="ResetBead ON" width="140" x="970" y="630"/>
   <AssignmentButton action="S ResetBead = 0;" alwaysAct="0" height="35" name="ResetBead OFF" width="140" x="970" y="680"/>
-  <MacroStep actionText=";" fileName="" height="70" id="09925ddb-b42f-4084-a548-e5d502b45bb6" name="Sorting" resumeMode="Default" useIcon="0" width="60" x="90" y="745">
-    <GCDocument color="-1" height="347" scale="1.0" socketSendMode="Inherit" viewPositionX="-164" viewPositionY="21" width="231" x="26" y="-2">
-      <ExitStep actionBlockVisible="0" actionText="" fileName="" height="85" id="72ccba27-8a9a-4568-b090-c79d670992dd" name="OUT" useIcon="0" width="60" x="260" y="1235"/>
-      <EnterStep actionBlockVisible="1" actionText="S Sol1 = 0;&#10;S Sol2 = 0;&#10;S Sol3 = 0;&#10;S Sol4 = 0;" fileName="" height="85" id="28ff66d0-adca-4725-9b93-aee9b9096411" name="IN" useIcon="0" width="170" x="270" y="50"/>
+  <MacroStep actionText=";" fileName="" height="70" id="09925ddb-b42f-4084-a548-e5d502b45bb6" name="Sorting" resumeMode="Default" useIcon="0" width="60" x="80" y="745">
+    <GCDocument color="-1" height="609" scale="1.0" socketSendMode="Inherit" viewPositionX="-164" viewPositionY="766" width="1136" x="0" y="0">
+      <ExitStep actionBlockVisible="1" actionText="S LED = 1;" fileName="" height="85" id="72ccba27-8a9a-4568-b090-c79d670992dd" name="OUT" useIcon="0" width="170" x="260" y="1235"/>
+      <EnterStep actionBlockVisible="1" actionText="S Sol1 = 0;&#10;S Sol2 = 0;&#10;S Sol3 = 0;&#10;S Sol4 = 0;&#10;S LED = 0;" fileName="" height="85" id="28ff66d0-adca-4725-9b93-aee9b9096411" name="IN" useIcon="0" width="170" x="270" y="50"/>
       <GCStep actionBlockVisible="1" actionText="S ResetBead = 1;&#10;S ResetColor = 1;&#10;" fileName="" height="70" id="d3652796-7ece-4097-93dc-1c2324978abf" name="S1" useIcon="0" width="200" x="270" y="195"/>
       <GCTransition actionText="1" conditionVisible="1" height="25" id="e7d44b63-4b55-40d5-8d6a-fb02a99f668f" width="30" x="285" y="160"/>
       <GCTransition actionText="1" conditionVisible="1" height="25" id="a7506cab-b5a8-4a8c-98b9-1c181936139a" width="30" x="285" y="280"/>
@@ -355,9 +355,9 @@
     </GCDocument>
   </MacroStep>
   <MacroStep actionText=";" fileName="" height="70" id="797dee64-85d6-4332-a92b-0e5090538032" name="Sequencing" resumeMode="Default" useIcon="0" width="60" x="450" y="735">
-    <GCDocument color="-1" height="533" scale="1.0" socketSendMode="Inherit" viewPositionX="-363" viewPositionY="17" width="1136" x="-93" y="204">
-      <ExitStep actionBlockVisible="1" actionText="" fileName="" height="85" id="056c918a-ef24-41a6-a490-d6503413f561" name="" useIcon="0" width="170" x="30" y="1015"/>
-      <EnterStep actionBlockVisible="1" actionText="S Tries = 0;&#10;S Tries2 = 0;" fileName="" height="90" id="903ee04d-5271-4ed3-843b-c09fb651cfb7" name="IN" useIcon="0" width="174" x="30" y="-61"/>
+    <GCDocument color="-1" height="533" scale="1.0" socketSendMode="Inherit" viewPositionX="-363" viewPositionY="632" width="1136" x="-81" y="24">
+      <ExitStep actionBlockVisible="1" actionText="S Sol4 = 0;&#10;S LED = 1;" fileName="" height="85" id="056c918a-ef24-41a6-a490-d6503413f561" name="" useIcon="0" width="170" x="30" y="1015"/>
+      <EnterStep actionBlockVisible="1" actionText="S Tries = 0;&#10;S Tries2 = 0;&#10;S LED = 0;" fileName="" height="90" id="903ee04d-5271-4ed3-843b-c09fb651cfb7" name="IN" useIcon="0" width="174" x="30" y="-61"/>
       <GCStep actionBlockVisible="1" actionText="S Sol1 = 0;" fileName="" height="70" id="1dff1f62-d799-449f-87ae-dd79bfac8ba4" name="S2" useIcon="0" width="205" x="30" y="185"/>
       <GCTransition actionText="S1.t &gt;= SeqReleaseTime" conditionVisible="1" height="25" id="0288b067-0da5-4d99-9736-38f61194c423" width="30" x="45" y="150"/>
       <GCTransition actionText="S2.t &gt;= SeqWaitTime" conditionVisible="1" height="25" id="21d115b5-4dc8-4d4b-8760-0ff8cb06ff48" width="30" x="45" y="290"/>
@@ -670,16 +670,16 @@
   <GCLink fromObject="6bcbb0c9-d39b-4995-815c-025c6a5c3a8f" manAdj="0" toObject="09925ddb-b42f-4084-a548-e5d502b45bb6_0">
     <Stroke x="120" y="736"/>
     <Stroke x="120" y="746"/>
-    <Stroke x="120" y="746"/>
-    <Stroke x="120" y="734"/>
-    <Stroke x="120" y="734"/>
-    <Stroke x="120" y="744"/>
+    <Stroke x="115" y="746"/>
+    <Stroke x="115" y="734"/>
+    <Stroke x="110" y="734"/>
+    <Stroke x="110" y="744"/>
   </GCLink>
   <GCLink fromObject="09925ddb-b42f-4084-a548-e5d502b45bb6_0" manAdj="0" toObject="80e5c236-8381-4695-bc06-a5e6fdaf8e67">
-    <Stroke x="120" y="816"/>
-    <Stroke x="120" y="826"/>
-    <Stroke x="120" y="826"/>
-    <Stroke x="120" y="809"/>
+    <Stroke x="110" y="816"/>
+    <Stroke x="110" y="826"/>
+    <Stroke x="115" y="826"/>
+    <Stroke x="115" y="809"/>
     <Stroke x="120" y="809"/>
     <Stroke x="120" y="819"/>
   </GCLink>
